@@ -1,0 +1,1197 @@
+# NILO — Plan Maestro de Producto, Negocio y Arquitectura
+**Versión 2.0 · Noviembre 2026**
+
+**Concepto:** Ecosistema mexicano de comercio inteligente  
+**Posicionamiento:** Tu amigo para comprar y vender.  
+**Mercado objetivo:** México  
+**Público:** Compradores, comercios, emprendedores y empresas.  
+**Modelo de marca:** Una sola marca, múltiples módulos.  
+**Personalidad:** Friend.  
+**Identidad visual:** Character.  
+**Infraestructura de pagos:** CoDi mediante Pey.  
+**Modelo de desarrollo:** Monolito modular, evolución progresiva y arquitectura preparada para escalar.
+
+---
+
+# 1. Resumen ejecutivo
+
+NILO es un ecosistema digital que conecta compradores y comercios mediante inteligencia artificial, herramientas de gestión comercial y pagos digitales.
+
+Su propósito es simplificar el proceso de comprar y vender.
+
+Un comprador puede expresar una necesidad en lenguaje natural. NILO interpreta la solicitud, encuentra opciones comerciales, compara propuestas, construye una cotización y acompaña al comprador durante el proceso de adquisición.
+
+Para los comercios, NILO proporciona herramientas para publicar productos, administrar solicitudes, preparar cotizaciones, gestionar pedidos, recibir pagos y analizar sus operaciones.
+
+La plataforma utiliza CoDi como infraestructura de pago, integrada mediante Pey. Los pagos se procesan a través de las cuentas y credenciales autorizadas de los comercios, sin que NILO custodie ni concentre dinero.
+
+## Visión
+
+Convertir NILO en una red nacional de comercio inteligente donde personas y negocios puedan encontrarse, negociar, comprar, vender y coordinar operaciones mediante inteligencia artificial.
+
+## Misión
+
+Hacer que comprar y vender sea más sencillo, accesible y transparente, proporcionando a las personas un agente que las acompañe y a los negocios herramientas para crecer.
+
+## Propuesta de valor
+
+Para compradores:
+
+- Encontrar productos y servicios mediante conversación.
+- Comparar opciones y cotizaciones.
+- Comprar productos disponibles o personalizados.
+- Gestionar pagos y pedidos.
+- Compartir compras con otras personas.
+- Consultar un historial verificable de operaciones.
+
+Para comercios:
+
+- Publicar productos y servicios.
+- Recibir solicitudes comerciales.
+- Generar cotizaciones.
+- Gestionar ventas y pedidos.
+- Recibir pagos mediante CoDi.
+- Automatizar tareas comerciales.
+- Consultar información de sus operaciones.
+
+**Principio fundamental:** NILO convierte conversaciones en operaciones comerciales ejecutables.
+
+---
+
+# 2. Identidad y posicionamiento de marca
+
+## 2.1 Marca principal
+
+Nombre: NILO.
+
+Todos los productos pertenecen a la misma identidad:
+
+- NILO AI
+- NILO Market
+- NILO Business
+- NILO Pay
+- NILO Together
+- NILO Trust
+
+No se crearán marcas independientes para cada módulo.
+
+## 2.2 Personalidad
+
+NILO tendrá una personalidad Friend.
+
+Debe sentirse como un compañero inteligente que:
+
+- Escucha.
+- Comprende.
+- Recomienda.
+- Explica.
+- Organiza.
+- Acompaña.
+- Resuelve problemas.
+
+No debe sentirse como un chatbot corporativo ni como un vendedor insistente.
+
+## 2.3 Identidad visual
+
+La identidad visual se construirá alrededor de un personaje reconocible.
+
+Características:
+
+- Diseño amigable.
+- Apariencia moderna.
+- Silueta memorable.
+- Personalidad expresiva.
+- Estética tecnológica.
+- Acabado premium.
+- Adaptabilidad a aplicaciones, web, notificaciones y materiales publicitarios.
+
+El personaje tendrá distintos estados expresivos según el contexto.
+
+Ejemplos:
+
+- Descubrimiento.
+- Recomendación.
+- Cotización.
+- Pago pendiente.
+- Pago confirmado.
+- Pedido en preparación.
+- Entrega.
+- Incidencia.
+
+La identidad no debe comprometer la claridad de las interfaces financieras.
+
+## 2.4 Posicionamiento
+
+**NILO — Tu amigo para comprar y vender.**
+
+Mensaje alternativo:
+
+*Encuentra lo que necesitas. Conecta con quien puede ofrecerlo. NILO se encarga de acompañarte.*
+
+---
+
+# 3. Ecosistema de productos
+
+NILO estará compuesto por seis módulos que compartirán usuarios, identidad, permisos, operaciones y datos.
+
+## 3.1 NILO AI — Agente inteligente
+
+Será la interfaz conversacional principal.
+
+Responsabilidades:
+
+- Comprender solicitudes.
+- Identificar productos y servicios.
+- Buscar comercios.
+- Comparar propuestas.
+- Preparar cotizaciones.
+- Crear pedidos mediante herramientas autorizadas.
+- Consultar estados de pago.
+- Informar sobre pedidos.
+- Ayudar a los comercios a administrar operaciones.
+
+Características:
+
+- Conversaciones persistentes.
+- Contexto de usuario.
+- Preferencias configurables.
+- Memoria controlada por el usuario.
+- Herramientas con permisos.
+- Confirmación antes de operaciones sensibles.
+- Compatibilidad con modelos de IA en la nube y Ollama.
+
+La IA no será responsable de calcular importes definitivos, confirmar pagos, modificar saldos ni decidir sobre operaciones financieras.
+
+Todas estas acciones dependerán de servicios deterministas del backend.
+
+## 3.2 NILO Market — Mercado digital
+
+Será el espacio para descubrir productos, servicios y comercios.
+
+Funcionalidades:
+
+- Catálogo comercial.
+- Categorías.
+- Búsqueda textual.
+- Búsqueda conversacional.
+- Filtros.
+- Comparación de productos.
+- Fichas de comercio.
+- Productos personalizados.
+- Productos bajo pedido.
+- Disponibilidad.
+- Cotizaciones.
+
+El marketplace comenzará con una oferta comercial limitada y validada.
+
+No se intentará incorporar miles de comercios sin tener primero una operación funcional.
+
+## 3.3 NILO Business — Herramientas comerciales
+
+Será el centro de operaciones para vendedores.
+
+Funcionalidades:
+
+- Registro de comercios.
+- Perfil comercial.
+- Sucursales.
+- Usuarios y empleados.
+- Catálogo.
+- Variantes.
+- Inventario.
+- Solicitudes.
+- Cotizaciones.
+- Pedidos.
+- Clientes.
+- Anticipos.
+- Saldos pendientes.
+- Reportes.
+- Historial comercial.
+
+Los comercios tendrán control sobre sus productos, precios, condiciones, disponibilidad y pedidos.
+
+## 3.4 NILO Pay — Pagos CoDi
+
+Será el módulo financiero y transaccional del ecosistema.
+
+Utilizará Pey como proveedor de integración con CoDi.
+
+Funcionalidades:
+
+- Crear intenciones de pago.
+- Generar solicitudes QR CoDi.
+- Solicitar pagos mediante push cuando esté disponible y autorizado.
+- Gestionar pagos por etapas.
+- Asociar referencias con pedidos.
+- Recibir eventos.
+- Verificar pagos.
+- Conciliar transacciones.
+- Registrar pagos parciales.
+- Identificar duplicados.
+- Consultar historial.
+
+NILO Pay no será una cartera digital, institución financiera ni custodio de dinero.
+
+No permitirá:
+
+- Guardar fondos de compradores.
+- Crear saldos monetarios internos.
+- Concentrar pagos de múltiples comercios.
+- Realizar transferencias automáticas no autorizadas.
+- Simular confirmaciones bancarias.
+- Ejecutar pagos sin autorización del usuario.
+
+El dinero deberá liquidarse directamente en las cuentas autorizadas correspondientes.
+
+## 3.5 NILO Together — Compras colaborativas
+
+Permitirá coordinar compras y operaciones entre varias personas.
+
+Funcionalidades futuras:
+
+- Regalos colectivos.
+- Aportaciones individuales.
+- Compras compartidas.
+- Reservas grupales.
+- Eventos.
+- Objetivos de compra.
+- Seguimiento de contribuciones.
+
+Cada contribución deberá contar con su propia referencia y evidencia transaccional.
+
+NILO registrará la coordinación de las aportaciones, sin concentrar ni custodiar el dinero de los participantes.
+
+## 3.6 NILO Trust — Confianza y transparencia
+
+Será la capa que permita consultar lo sucedido durante una operación.
+
+Funcionalidades:
+
+- Historial de pedidos.
+- Historial de pagos.
+- Comprobantes.
+- Referencias.
+- Evidencia de autorizaciones.
+- Registro de cambios.
+- Incidencias.
+- Reputación comercial.
+- Seguimiento de operaciones.
+
+La reputación se construirá mediante operaciones verificables y mecanismos de moderación.
+
+No se permitirán reseñas ficticias ni indicadores comerciales inventados.
+
+---
+
+# 4. Modelo de negocio
+
+NILO tendrá un modelo B2C y B2B.
+
+Los compradores tendrán acceso gratuito a las funciones esenciales. Los comercios podrán contratar herramientas comerciales adicionales.
+
+## 4.1 Compradores
+
+Modelo inicial: gratuito.
+
+Incluye:
+
+- Registro.
+- Agente personal.
+- Búsqueda.
+- Comparación.
+- Compras.
+- Seguimiento.
+- Historial.
+
+En el futuro podrán introducirse funciones premium, siempre que exista una razón clara para cobrarlas.
+
+## 4.2 Comercios
+
+Modelo basado en suscripciones.
+
+Precios iniciales experimentales:
+
+| Plan | Precio mensual | Características |
+|---|---:|---|
+| Starter | $149 MXN | Perfil, catálogo y pedidos básicos |
+| Pro | $399 MXN | Automatizaciones, estadísticas y herramientas avanzadas |
+| Enterprise | Cotización | Multi-sucursal, integraciones y administración avanzada |
+
+Los precios son hipótesis comerciales que deberán validarse con entrevistas y pilotos.
+
+## 4.3 Fuentes de ingresos
+
+1. Suscripciones comerciales.
+2. Herramientas premium.
+3. Automatizaciones avanzadas.
+4. Integraciones empresariales.
+5. Servicios de configuración.
+6. API para terceros.
+7. Soluciones empresariales personalizadas.
+
+No se presupuestará ingreso por comisiones de pagos CoDi sin una validación contractual, regulatoria y operativa previa.
+
+## 4.4 Estrategia de crecimiento
+
+La adquisición tendrá dos lados:
+
+**Demanda:** compradores que utilizan NILO para resolver necesidades reales.
+
+**Oferta:** comercios que encuentran una fuente de solicitudes y herramientas para administrar sus ventas.
+
+La estrategia inicial será concentrar la oferta por categorías y zonas geográficas antes de intentar cubrir todo México.
+
+---
+
+# 5. Arquitectura técnica
+
+## 5.1 Principios
+
+- Monolito modular.
+- Separación de responsabilidades.
+- Seguridad por defecto.
+- API interna bien definida.
+- Dominio independiente del proveedor de pagos.
+- Procesamiento asíncrono.
+- Auditoría de operaciones.
+- Escalabilidad gradual.
+- Infraestructura de bajo costo inicial.
+
+No se implementarán microservicios durante el MVP.
+
+## 5.2 Stack tecnológico
+
+| Capa | Tecnología |
+|---|---|
+| Frontend | Next.js + TypeScript |
+| Aplicación | Web responsive / PWA |
+| UI | Tailwind CSS + componentes accesibles |
+| Backend | Next.js Route Handlers y servicios de dominio |
+| Base de datos | PostgreSQL |
+| ORM | Prisma |
+| Autenticación | Supabase Auth |
+| Archivos | Supabase Storage |
+| Búsqueda | PostgreSQL Full Text Search |
+| IA | Proveedor LLM intercambiable + Ollama |
+| Pagos | Adaptador Pey / CoDi |
+| Procesamiento | Cola persistente |
+| Observabilidad | Sentry y logs estructurados |
+| Hosting inicial | Vercel + Supabase |
+
+La arquitectura debe evitar dependencias innecesarias y permitir cambiar proveedores sin reescribir el dominio comercial.
+
+## 5.3 Estructura modular
+
+Propuesta de organización:
+
+```text
+nilo/
+├── app/
+│   ├── (public)/
+│   ├── (auth)/
+│   ├── (buyer)/
+│   ├── (business)/
+│   ├── (admin)/
+│   └── api/
+│
+├── modules/
+│   ├── identity/
+│   ├── agent/
+│   ├── marketplace/
+│   ├── merchants/
+│   ├── catalog/
+│   ├── quotes/
+│   ├── orders/
+│   ├── payments/
+│   ├── collective/
+│   ├── trust/
+│   └── notifications/
+│
+├── infrastructure/
+│   ├── database/
+│   ├── auth/
+│   ├── storage/
+│   ├── queue/
+│   ├── ai/
+│   ├── pey/
+│   └── observability/
+│
+├── shared/
+│   ├── contracts/
+│   ├── schemas/
+│   ├── permissions/
+│   ├── errors/
+│   └── utilities/
+│
+├── tests/
+└── docs/
+```
+
+La estructura es una propuesta lógica; deberá ajustarse al repositorio y las convenciones definitivas del proyecto.
+
+## 5.4 Separación de responsabilidades
+
+Cada módulo debe tener:
+
+- Servicios.
+- Reglas de negocio.
+- Validaciones.
+- Contratos.
+- Persistencia.
+- Eventos.
+- Pruebas.
+
+Los módulos no deberán acceder arbitrariamente a tablas internas de otros dominios.
+
+Las operaciones entre módulos se realizarán mediante servicios o contratos explícitos.
+
+---
+
+# 6. Modelo de datos
+
+## 6.1 Identidad
+
+- User
+- Profile
+- Role
+- Permission
+- UserPreference
+- Session
+
+Un usuario podrá actuar como comprador y vendedor, sujeto a permisos diferentes.
+
+## 6.2 Comercios
+
+- Merchant
+- MerchantMember
+- MerchantVerification
+- Branch
+- MerchantSettings
+- MerchantPaymentConfiguration
+
+La configuración financiera deberá mantenerse separada y protegida.
+
+## 6.3 Catálogo
+
+- Product
+- ProductVariant
+- Category
+- ProductImage
+- Inventory
+- Availability
+- PricingRule
+
+Los precios deberán ser controlados por el comercio y calculados en backend.
+
+## 6.4 Cotizaciones
+
+- Quote
+- QuoteItem
+- QuoteRevision
+- QuoteExpiration
+- QuoteAcceptance
+
+Las cotizaciones aceptadas conservarán una copia de las condiciones comerciales originales.
+
+## 6.5 Pedidos
+
+- Order
+- OrderItem
+- OrderStatus
+- OrderEvent
+- Fulfillment
+- OrderAssignment
+
+Los pedidos tendrán estados independientes de los pagos.
+
+## 6.6 Pagos
+
+- PaymentIntent
+- PaymentAttempt
+- Transaction
+- PaymentReference
+- WebhookEvent
+- ReconciliationRecord
+- RefundRecord
+
+No se utilizará una sola columna `paid` como representación completa del estado financiero.
+
+Cada intento y transacción tendrá su propio ciclo de vida.
+
+## 6.7 Compras colectivas
+
+- GroupPurchase
+- GroupParticipant
+- Contribution
+- ContributionTransaction
+- GroupStatus
+
+Los participantes y sus aportaciones estarán vinculados a transacciones verificables.
+
+## 6.8 Confianza
+
+- Review
+- Dispute
+- AuditLog
+- VerificationEvidence
+- ModerationRecord
+
+---
+
+# 7. Arquitectura de pagos CoDi y Pey
+
+Este es uno de los componentes estratégicos de NILO.
+
+## 7.1 Objetivo
+
+Permitir que los comercios utilicen CoDi para cobrar a compradores a través de experiencias integradas en NILO.
+
+## 7.2 Arquitectura
+
+Se implementará una capa independiente:
+
+```text
+NILO Application
+       |
+       v
+Payment Domain
+       |
+       v
+Payment Orchestrator
+       |
+       v
+Pey Adapter
+       |
+       v
+Pey API
+       |
+       v
+CoDi / Banco
+       |
+       v
+Webhook
+       |
+       v
+Webhook Verification
+       |
+       v
+Transaction Reconciliation
+       |
+       v
+Order Automation
+```
+
+## 7.3 Tipos de cobro
+
+**QR con importe definido**
+
+Para compras y pedidos con importe previamente acordado.
+
+**QR con importe abierto**
+
+Para experiencias compatibles donde el comprador pueda introducir el importe, sujeto a las condiciones de Pey y a controles comerciales.
+
+**Notificación push**
+
+Para solicitar un pago mediante el mecanismo push CoDi cuando el banco, la API y la autorización del comprador lo permitan.
+
+**Pagos por etapas**
+
+Para operaciones con anticipo y liquidación.
+
+Cada etapa tendrá una intención independiente y estará vinculada al mismo pedido.
+
+## 7.4 Ciclo de pago
+
+1. El comprador acepta una cotización.
+2. El backend calcula y valida el importe.
+3. Se crea una intención de pago.
+4. Se identifica la configuración autorizada del comercio.
+5. Pey genera el mecanismo CoDi.
+6. El comprador autoriza el pago en su aplicación bancaria.
+7. Pey notifica el resultado.
+8. El backend verifica el evento.
+9. Se registra la transacción.
+10. Se concilia contra pedido, importe y comercio.
+11. El pedido cambia de estado únicamente cuando corresponde.
+
+## 7.5 Seguridad
+
+- Secretos únicamente en backend.
+- Credenciales aisladas por comercio.
+- Verificación de firmas.
+- Protección contra replay.
+- Idempotencia.
+- Validación de importes.
+- Referencias únicas.
+- Control de expiración.
+- Registro de eventos.
+- Reintentos seguros.
+- Alertas ante inconsistencias.
+
+Los webhooks nunca deberán modificar estados sin pasar por validación.
+
+## 7.6 Restricciones
+
+La integración multi-comercio debe cumplir las condiciones de Pey y las autorizaciones correspondientes.
+
+Cada comercio debe tener una configuración financiera y una cuenta destino habilitadas conforme al modelo aplicable.
+
+No se asumirán permisos de cobro a nombre de terceros sin confirmación contractual.
+
+Los reembolsos no se tratarán como reversos automáticos de CoDi. Se diseñará un procedimiento explícito de devolución desde la cuenta correspondiente.
+
+---
+
+# 8. Inteligencia artificial
+
+## 8.1 Arquitectura
+
+La IA será un orquestador de herramientas, no una autoridad financiera.
+
+Componentes:
+
+- Conversation Manager.
+- Context Manager.
+- Intent Classifier.
+- Tool Registry.
+- Permission Validator.
+- LLM Provider.
+- Response Generator.
+- Agent Audit.
+
+## 8.2 Herramientas disponibles
+
+Ejemplos:
+
+- search_products
+- search_merchants
+- compare_products
+- request_quote
+- create_order
+- get_order_status
+- create_payment_intent
+- get_payment_status
+- get_transaction_history
+- update_business_catalog
+
+Cada herramienta tendrá esquema, validaciones, permisos y registro de ejecución.
+
+## 8.3 Reglas del agente
+
+- No inventar productos.
+- No inventar precios.
+- No inventar disponibilidad.
+- No confirmar pagos por lenguaje natural.
+- No modificar cuentas bancarias.
+- No realizar compras sin autorización.
+- No ejecutar cobros sin consentimiento.
+- No exponer información de otros usuarios.
+- No acceder a operaciones de un comercio sin permisos.
+
+Las operaciones sensibles necesitarán una confirmación explícita del usuario.
+
+## 8.4 Estrategia de modelos
+
+Se implementará una capa de abstracción para soportar:
+
+- Modelos económicos en la nube.
+- Modelos locales mediante Ollama.
+- Diferentes proveedores.
+- Límites de uso.
+- Fallback controlado.
+
+No se construirá un sistema de entrenamiento propio durante el MVP.
+
+---
+
+# 9. Experiencia de usuario
+
+## 9.1 Experiencia del comprador
+
+Navegación:
+
+- Inicio.
+- Descubrir.
+- Conversar con NILO.
+- Compras.
+- Actividad.
+- Perfil.
+
+Flujo principal:
+
+1. El usuario explica lo que necesita.
+2. NILO hace preguntas cuando falta información.
+3. Busca productos y comercios reales.
+4. Presenta opciones comparables.
+5. El usuario selecciona una propuesta.
+6. NILO prepara una cotización.
+7. El usuario acepta.
+8. NILO genera una solicitud de pago CoDi.
+9. El usuario autoriza en su banco.
+10. El sistema confirma la transacción.
+11. El usuario sigue su pedido.
+
+## 9.2 Experiencia del comercio
+
+Navegación:
+
+- Inicio.
+- Pedidos.
+- Cotizaciones.
+- Catálogo.
+- Clientes.
+- Pagos.
+- Estadísticas.
+- Configuración.
+
+El comercio debe poder gestionar las operaciones sin depender del agente.
+
+NILO AI funcionará como asistente administrativo adicional.
+
+## 9.3 Experiencia administrativa
+
+Se necesitará un panel de administración para:
+
+- Validar comercios.
+- Revisar publicaciones.
+- Atender reportes.
+- Consultar eventos.
+- Administrar categorías.
+- Revisar incidencias.
+- Consultar auditoría.
+- Supervisar el estado del sistema.
+
+Las acciones administrativas estarán sujetas a permisos y auditoría.
+
+---
+
+# 10. Seguridad, privacidad y cumplimiento
+
+La seguridad será una característica estructural.
+
+## 10.1 Controles técnicos
+
+- Autenticación robusta.
+- Autorización por recurso.
+- Aislamiento entre comercios.
+- Validación de entradas.
+- Rate limiting.
+- Protección de sesiones.
+- Gestión segura de secretos.
+- Cifrado en tránsito.
+- Copias de seguridad.
+- Registro de auditoría.
+- Protección de webhooks.
+- Revisión de dependencias.
+
+## 10.2 Datos personales
+
+NILO deberá definir:
+
+- Aviso de privacidad.
+- Finalidades de tratamiento.
+- Consentimientos aplicables.
+- Políticas de retención.
+- Procedimientos para solicitudes de titulares.
+- Eliminación y anonimización cuando corresponda.
+- Controles de acceso a información.
+
+Se revisarán las obligaciones legales mexicanas aplicables antes del lanzamiento comercial.
+
+## 10.3 Seguridad financiera
+
+NILO no debe presentarse como una entidad financiera ni como proveedor de servicios bancarios.
+
+La plataforma coordina operaciones comerciales y solicitudes de cobro; la autorización y liquidación ocurren mediante CoDi y los participantes autorizados.
+
+Antes de habilitar operaciones multi-comercio se obtendrá confirmación de Pey sobre la estructura permitida.
+
+---
+
+# 11. Roadmap de desarrollo
+
+Los tiempos siguientes son estimaciones de planificación y deberán ajustarse según el equipo, la integración financiera y los resultados de los pilotos.
+
+## Fase 0 — Validación y fundamentos
+
+**Duración estimada: 1–2 semanas**
+
+Objetivos:
+
+- Definir el primer segmento comercial.
+- Seleccionar un comercio piloto.
+- Confirmar el modelo operativo con Pey.
+- Verificar requisitos de producción.
+- Diseñar el dominio principal.
+- Definir arquitectura y modelo de datos.
+- Preparar el repositorio.
+
+Entregables:
+
+- PRD.
+- Arquitectura.
+- Modelo de datos.
+- Diseño UX.
+- Especificación de pagos.
+- Plan de pruebas.
+
+## Fase 1 — MVP comercial
+
+**Duración estimada: 4–6 semanas**
+
+Implementar:
+
+- Registro.
+- Perfiles.
+- Roles.
+- Comercios.
+- Catálogo.
+- Búsqueda.
+- Agente conversacional.
+- Cotizaciones.
+- Pedidos.
+- Panel de comprador.
+- Panel comercial.
+
+Resultado: una persona puede solicitar un producto, recibir una propuesta y generar un pedido.
+
+## Fase 2 — NILO Pay
+
+**Duración estimada: 2–4 semanas, dependiendo de habilitaciones externas**
+
+Implementar:
+
+- Adaptador Pey.
+- Configuración por comercio.
+- QR CoDi.
+- Push CoDi.
+- Payment Intent.
+- Webhooks.
+- Verificación.
+- Conciliación.
+- Historial.
+- Auditoría.
+
+Resultado: el comprador puede realizar un pago CoDi real y el comercio recibe la confirmación validada.
+
+## Fase 3 — Operación comercial avanzada
+
+**Duración estimada: 4–6 semanas**
+
+Implementar:
+
+- Inventario.
+- Variantes.
+- Anticipos.
+- Liquidaciones.
+- Gestión de producción.
+- Notificaciones.
+- Reportes.
+- Automatizaciones.
+
+## Fase 4 — NILO Together
+
+**Duración estimada: 4–6 semanas**
+
+Implementar:
+
+- Compras grupales.
+- Participantes.
+- Aportaciones.
+- Objetivos.
+- Seguimiento.
+- Conciliación individual.
+
+## Fase 5 — Expansión de NILO Market
+
+**Duración estimada: 6–10 semanas**
+
+Implementar:
+
+- Incorporación de comercios.
+- Categorías adicionales.
+- Búsqueda geográfica.
+- Recomendaciones.
+- Moderación.
+- Reputación.
+- Herramientas de descubrimiento.
+
+## Fase 6 — Ecosistema nacional
+
+**Horizonte: 10–18 meses**
+
+Explorar:
+
+- API pública.
+- Integraciones externas.
+- Multi-sucursal avanzado.
+- Redes comerciales.
+- Proveedores.
+- Integraciones logísticas.
+- Automatizaciones entre empresas.
+- Herramientas empresariales.
+
+---
+
+# 12. Alcance del MVP
+
+El MVP debe resolver un flujo completo.
+
+## Comprador
+
+- Crear cuenta.
+- Conversar con NILO.
+- Buscar productos.
+- Consultar comercios.
+- Recibir cotizaciones.
+- Aceptar una propuesta.
+- Pagar con CoDi.
+- Consultar el estado del pedido.
+
+## Comercio
+
+- Crear perfil.
+- Publicar productos.
+- Gestionar catálogo.
+- Recibir solicitudes.
+- Generar cotizaciones.
+- Recibir pedidos.
+- Consultar pagos.
+- Actualizar estados.
+
+## Infraestructura
+
+- Autenticación.
+- Permisos.
+- PostgreSQL.
+- IA con herramientas.
+- Integración Pey.
+- QR y push CoDi.
+- Webhooks.
+- Conciliación.
+- Auditoría.
+- Observabilidad.
+
+## Fuera del MVP
+
+No desarrollar inicialmente:
+
+- Aplicaciones móviles nativas.
+- Cartera digital.
+- Custodia de dinero.
+- Sistema de créditos.
+- Marketplace universal.
+- Logística propia.
+- Microservicios.
+- API pública.
+- Sistema avanzado de publicidad.
+- Automatizaciones financieras sin autorización.
+- Integraciones no autorizadas con marketplaces externos.
+
+---
+
+# 13. Estrategia de lanzamiento
+
+NILO comenzará mediante un piloto controlado.
+
+## Etapa piloto
+
+Objetivo: comprobar que compradores y comercios pueden completar operaciones reales.
+
+Participantes:
+
+- 5–10 comercios.
+- Un catálogo reducido.
+- Compradores invitados.
+- Una o pocas categorías comerciales.
+
+Objetivo de validación: registrar y analizar las primeras 50 operaciones.
+
+No se considerará validado el producto únicamente por tener usuarios registrados.
+
+## Expansión local
+
+Una vez comprobado el flujo:
+
+- Incorporar más comercios.
+- Abrir nuevas categorías.
+- Mejorar búsqueda.
+- Recoger opiniones.
+- Optimizar conversión.
+- Mejorar las herramientas comerciales.
+
+## Expansión nacional
+
+La expansión se realizará por segmentos y zonas, comprobando que existe oferta suficiente y que los comercios pueden operar correctamente.
+
+No se anunciará cobertura nacional si todavía no existe una red comercial que la respalde.
+
+---
+
+# 14. Indicadores de éxito
+
+## Compradores
+
+- Usuarios activos.
+- Solicitudes comerciales.
+- Cotizaciones recibidas.
+- Cotizaciones aceptadas.
+- Conversión a pago.
+- Compras completadas.
+- Recompra.
+
+## Comercios
+
+- Comercios activos.
+- Productos publicados.
+- Solicitudes recibidas.
+- Pedidos atendidos.
+- Tiempo de respuesta.
+- Retención.
+- Ingresos por suscripción.
+
+## Pagos
+
+- Solicitudes de cobro generadas.
+- Pagos confirmados.
+- Pagos fallidos.
+- Pagos pendientes.
+- Tiempo de confirmación observado.
+- Errores de webhook.
+- Incidencias de conciliación.
+- Duplicados evitados.
+
+## Inteligencia artificial
+
+- Solicitudes resueltas.
+- Cotizaciones generadas correctamente.
+- Errores de herramientas.
+- Costo por conversación.
+- Tiempo de respuesta.
+- Operaciones que requieren intervención humana.
+
+---
+
+# 15. Riesgos y mitigaciones
+
+| Riesgo | Mitigación |
+|---|---|
+| Integración Pey no habilitada | Validar requisitos y producción antes de comprometer el lanzamiento |
+| Modelo multi-comercio no autorizado | Empezar con un comercio y obtener confirmación contractual |
+| Pagos duplicados | Idempotencia y registro de transacciones |
+| Pagos no conciliados | Proceso de conciliación y alertas |
+| IA inventa datos | Consultar catálogo y precios del backend |
+| Baja adopción de CoDi | Medir elegibilidad y conversión en pilotos |
+| Pocos comercios | Concentrar oferta por categoría |
+| Costos de IA elevados | Límites, modelos económicos y Ollama |
+| Fraude comercial | Verificación y moderación |
+| Complejidad de producto | Monolito modular y roadmap por etapas |
+
+---
+
+# 16. Criterios de aceptación del MVP
+
+NILO no estará listo para lanzamiento hasta demostrar:
+
+1. Un comprador puede registrarse.
+2. Un comercio puede registrarse y publicar productos.
+3. El comprador puede buscar productos reales.
+4. NILO puede generar una cotización basada en datos comerciales.
+5. El comprador puede aceptar la cotización.
+6. El backend puede crear una intención de pago.
+7. Pey puede generar una solicitud CoDi real.
+8. El comprador puede autorizar el pago.
+9. NILO puede verificar el resultado recibido.
+10. El sistema puede evitar procesar dos veces una misma transacción.
+11. El pedido cambia de estado correctamente.
+12. El comercio puede gestionar el pedido.
+13. El comprador puede consultar su historial.
+14. La información de un comercio no es accesible por otro sin autorización.
+15. Las operaciones importantes quedan registradas.
+
+Las pruebas deben incluir casos exitosos, fallidos, expirados, duplicados, parciales y eventos recibidos fuera de orden.
+
+---
+
+# 17. Estrategia inmediata: Hackatón México 2026
+
+El hackatón será una oportunidad para construir y validar la primera experiencia transaccional de NILO.
+
+No se intentará entregar el ecosistema completo.
+
+## Proyecto para el hackatón
+
+**NILO Encargos — De una conversación a un encargo confirmado.**
+
+Experiencia:
+
+1. El comprador solicita un producto personalizado.
+2. NILO comprende sus preferencias.
+3. Encuentra un comercio participante.
+4. Genera una cotización.
+5. El comprador la acepta.
+6. NILO solicita un anticipo CoDi.
+7. El comprador autoriza el pago.
+8. Pey comunica el resultado.
+9. NILO verifica la transacción.
+10. El comercio recibe la orden de trabajo.
+
+Elementos esenciales:
+
+- Un comercio real.
+- Catálogo limitado.
+- Integración real de Pey.
+- CoDi en producción.
+- Webhook funcional.
+- Panel comercial.
+- Demo pública.
+- Video demostrativo.
+- Declaración transparente de componentes preexistentes.
+
+La integración multi-comercio no se considerará garantizada hasta obtener autorización y confirmación de Pey.
+
+---
+
+# 18. Principios no negociables
+
+1. NILO no será un banco ni una cartera.
+2. NILO no custodiará dinero.
+3. CoDi será el único medio de pago del producto.
+4. Ningún pago se confirmará desde el frontend.
+5. La IA no tendrá autoridad financiera.
+6. Los usuarios autorizarán operaciones sensibles.
+7. Los comercios controlarán sus productos y condiciones.
+8. Los precios deberán provenir de datos reales.
+9. La seguridad y privacidad serán parte del diseño.
+10. No se publicarán métricas ficticias.
+11. No se prometerán integraciones no verificadas.
+12. No se desarrollará una función sin una necesidad de usuario o comercial identificable.
+
+---
+
+# 19. Definición final del producto
+
+NILO es una plataforma de comercio inteligente que permite a las personas encontrar, comparar y comprar productos y servicios mediante un agente de inteligencia artificial, mientras proporciona a los comercios herramientas para gestionar sus ventas, cotizaciones, pedidos y cobros.
+
+Su infraestructura conecta las operaciones comerciales con CoDi mediante Pey, permitiendo que los pagos confirmados activen procesos reales y verificables.
+
+La plataforma evolucionará desde un MVP comercial hacia una red nacional de comercios, compradores y servicios conectados.
+
+**NILO no busca sustituir a los comercios. Busca darles mejores herramientas para conectar con sus clientes y hacer más sencilla la experiencia de compra.**
+
+---
+
+# 20. Objetivo principal
+
+Construir una plataforma donde una persona pueda decir:
+
+*«NILO, necesito encontrar y comprar esto».*
+
+Y donde NILO pueda responder:
+
+*«Ya encontré una opción adecuada. Esta es la cotización, estas son las condiciones y este es el mecanismo para autorizar el pago. Te acompañaré hasta que tu pedido esté completado».*
+
+**NILO — Tu amigo para comprar y vender.**
+
+*Una conversación puede iniciar una compra. Una operación verificable puede construir confianza. Una red de comercios puede construir un ecosistema.*
